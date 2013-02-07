@@ -1,4 +1,4 @@
 pythonsudokusolver
 ==================
 
-Een eenvoudige sudoku oplosser, in Python
+First test in Python
