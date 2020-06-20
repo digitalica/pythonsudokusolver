@@ -1,4 +1,4 @@
-from sets import Set
+
 
 # In de definitie staat 0 voor een lege positie
 Sudoku = [
@@ -26,7 +26,7 @@ def solvesudoku(sudoku):
     for r in range(0, 9):
         options.append([0] * 9)
         for c in range(0, 9):
-            options[r][c] = Set(range(1, 10))    
+            options[r][c] = set(range(1, 10))    
 
     # Zet een cijfer op een positie
     def setKnownValueAt(row, col, value):
@@ -45,7 +45,7 @@ def solvesudoku(sudoku):
                 if value in options[r][c]:
                     options[r][c].remove(value)
         # het cijfer is de enige optie hier
-        options[row][col] = Set([value])
+        options[row][col] = set([value])
         
     # stel de gegeven cijfers (en dus opties) in 
     for r in range(0, 9):
